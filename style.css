@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+
+
+/* Flex Layout */
+body{
+   background-color: brown;
+}
+
+header, footer{
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+}
+
+
+/* Header styles */
+header{
+   background-color: #8B4513;
+}
+
+
+img {
+  display: block; /* make the image a block element */
+  margin: 0 auto; /* set the left and right margins to auto */
+  width: 100px;
+}
+
+/* Navigation list styles */
+.nav-area{
+   float: right;
+   list-style: none;
+   margin-top: 50px;
+}
+
+.nav-area li{
+   display: inline-block;
+}
+
+.nav-area li a{
+   text-decoration: none;
+   padding: 5px 20px;
+   font-family: Bahnschrift;
+   font-size: 18px;
+   color: rgb(119, 0, 179);
+}
+
+.nav-area li a:hover{
+   color: white;
+}
+
+/* Navigation menu list styles */
+.overlay {
+   height: 0%;
+   width: 100%;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0, 0.9);
+   overflow-y: hidden;
+   transition: 0.5s;
+}
+ 
+.overlay-content {
+   position: relative;
+   top: 25%;
+   width: 100%;
+   text-align: center;
+   margin-top: 30px;
+}
+ 
+.overlay a {
+   padding: 35px;
+   text-decoration: none;
+   font-size: 40px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+}
+ 
+.overlay a:hover, .overlay a:focus {
+   color: #f1f1f1;
+}
+ 
+.overlay .closebtn {
+   position: absolute;
+   top: 20px;
+   right: 45px;
+   font-size: 60px;
+}
+ 
+@media screen and (max-height: 450px) {
+   .overlay {overflow-y: auto;}
+   .overlay a {font-size: 20px}
+   .overlay .closebtn {
+   font-size: 40px;
+   top: 15px;
+   right: 35px;
+   }
+}
+
+/* Back to top*/
+#myBtn {
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+   z-index: 99;
+   font-size: 18px;
+   border: none;
+   outline: none;
+   background-color: rgb(153, 255, 153);
+   color: black;
+   cursor: pointer;
+   padding: 15px;
+   border-radius: 4px;
+}
+ 
+#myBtn:hover {
+   background-color: white;
+}
+
+/* Footer styles */   
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   color: black;    
+   background-color: #8B4513;
+   color: white;
+    text-align: center;
+ }
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+   
+   a#navicon {
+      display: block;
+   }
+   
+   header nav ul {
+      display: none;
+   }
+   
+   header nav ul li {
+      font-size: 1em;
+      line-height: 1.3em;
+      height: 1.3em;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width: 641px) {
+
+   header nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: center;
+      justify-content: center;
+   }
+   
+   header nav ul li {
+      -webkit-flex: 0 1 auto;
+      flex: 0 1 auto;
+   }
+}
