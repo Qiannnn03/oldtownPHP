@@ -1,5 +1,5 @@
 <?php
-$connection = new mysqli("php-database.cdnok204jmx0.us-east-1.rds.amazonaws.com","admin","admin123");
+$connection = new mysqli("oldtown-db.cdnok204jmx0.us-east-1.rds.amazonaws.com","admin","admin123");
 $db = mysqli_select_db($connection, 'oldtown');
 
     if(isset($_POST['editevent']))
@@ -17,7 +17,7 @@ $db = mysqli_select_db($connection, 'oldtown');
         if($query_run)
         {
             echo '<script> alert("Data Updated"); </script>';
-            header("Location:manage.php");
+            header("Location:index.php");
         }
         else
         {
