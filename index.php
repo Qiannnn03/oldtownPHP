@@ -166,7 +166,7 @@
 
 
                  <?php
-                $connection = new mysqli("php-database.cdnok204jmx0.us-east-1.rds.amazonaws.com","admin","admin123");
+                $connection = new mysqli("oldtown-db.cdnok204jmx0.us-east-1.rds.amazonaws.com","admin","admin123");
                 $db = mysqli_select_db($connection, 'oldtown');
 
                 $query = "SELECT * FROM product";
