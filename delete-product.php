@@ -12,7 +12,7 @@ if(isset($_POST['delete']))
     if($query_run)
     {
         echo '<script> alert("Data Deleted"); </script>';
-        header("Location:manage.php");
+        header("Location:index.php");
     }
     else
     {
